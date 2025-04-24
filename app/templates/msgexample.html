@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>{{ title }}</title>
+    </head>
+
+    <body>
+        <h1>Hello {{ name }}!</h1>
+        {% if messages %}
+
+        <ul>
+            {% for item in messages %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p>No messages to display.</p>
+        {% endif %}
+    </body>
+</html>
