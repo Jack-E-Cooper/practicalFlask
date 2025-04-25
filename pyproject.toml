@@ -1,0 +1,11 @@
+[project]
+name = "flaskr"
+version = "0.1.0"
+description = "A test project based on the flask tutorial."
+dependencies = [
+    "flask",
+]
+
+[project.urls]
+Homepace = "https://github.com/Jack-E-Cooper/practicalFlask"
+Issues = "https://github.com/Jack-E-Cooper/practicalFlask/issues"
