@@ -1,3 +1,5 @@
 PracticalPythonFlask.code-workspace
 *.sqlite
 *.egg-info
+.coverage
+src/tests/__pycache__/*

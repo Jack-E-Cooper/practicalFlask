@@ -9,3 +9,10 @@ dependencies = [
 [project.urls]
 Homepace = "https://github.com/Jack-E-Cooper/practicalFlask"
 Issues = "https://github.com/Jack-E-Cooper/practicalFlask/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["src/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["flaskr"]

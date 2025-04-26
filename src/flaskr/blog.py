@@ -27,7 +27,7 @@ def create():
         error = None
 
         if not title:
-            error = 'Title is required'
+            error = 'Title is required.'
 
         if error is not None:
             flash(error)
@@ -43,21 +43,21 @@ def create():
         
     return render_template('blog/create.html')
 
-def create_post(id, check_author=True):
-    post = get_db().execute(
-        'SELECT p.id, title, body, created, author_id, username'
-        ' FROM post p JOIN user u ON p.author_id = u.id'
-        ' WHERE p.id = ?',
-        (id,)
-    ).fetchone()
+# def create_post(id, check_author=True):
+#     post = get_db().execute(
+#         'SELECT p.id, title, body, created, author_id, username'
+#         ' FROM post p JOIN user u ON p.author_id = u.id'
+#         ' WHERE p.id = ?',
+#         (id,)
+#     ).fetchone()
 
-    if post is None:
-        abort(404, f"Post id {id} doesn't exist.")
+#     if post is None:
+#         abort(404, f"Post id {id} doesn't exist.")
 
-    if check_author and post['author_id'] != g.user['id']:
-        abort(403)
+#     if check_author and post['author_id'] != g.user['id']:
+#         abort(403)
 
-    return post
+#     return post
 
 def get_post(id, check_author=True):
     post = get_db().execute(
